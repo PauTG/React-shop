@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+:root {
+  font-family: 'Nova Square', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;  
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  --borderLine: 1px solid rgba(128, 128, 128, 0.429);
+  --bgColor: rgba(255, 255, 255, 0.5);
+}

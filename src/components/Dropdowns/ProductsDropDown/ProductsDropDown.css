@@ -1,0 +1,18 @@
+.dropDownContainer{
+    background-color: rgb(66, 66, 66);
+    min-width: 10em;
+    max-width: 15%;
+    border: var(--borderLine);
+    position: fixed;
+    top: 17%;
+    left: 12%;
+}
+.dropDownContainer ul{
+    list-style: none;
+    padding: 1em;
+}
+
+.dropDownContainer li{
+    border-bottom: var(--borderLine);
+    margin-bottom: 1em;
+}

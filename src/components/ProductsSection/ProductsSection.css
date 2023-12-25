@@ -1,0 +1,9 @@
+.productSection{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: var(--borderLine);
+    margin-top: 3em;
+}
+

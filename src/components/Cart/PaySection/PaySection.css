@@ -1,0 +1,51 @@
+.paysection {
+  background-color: gray;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 1em;
+}
+
+.cardImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardImg img {
+  width: 50%;
+}
+.paysection form {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  align-items: center;
+}
+.paysection input{
+  width: 75%;
+}
+.paysection p{
+  margin: 0;
+  color: red;
+  margin-bottom: .5em;
+}
+.paysection button{
+  margin-bottom: 3em;
+}
+
+.expirationDate{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 1em;
+}
+.expirationDate div{
+  display: flex;
+}
+
+.dateDiv{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 1em 0;
+}

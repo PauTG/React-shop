@@ -1,0 +1,14 @@
+.cartDiv {
+  background-color: var(--bgColor);
+  color: aliceblue;
+  border: 1px solid rgba(0,0,0,0.5);
+  margin: 1em;
+  padding: 1em;
+  min-height: 100vh;
+}
+.cartDiv div{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
