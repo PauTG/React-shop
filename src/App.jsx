@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
 import axios from "axios";
 import PaySection from "./components/Cart/PaySection/PaySection";
+import OnSaleSection from "./components/OnSaleSection/OnSaleSection";
+import AboutUs from "./components/AboutUs/AboutUs";
+
 
 const App = () => {
   // productos
@@ -107,6 +110,8 @@ const App = () => {
             <Route path="/cart/*" element={<Cart />} />
             <Route path="/" element={<ProductsSection datos={productos} />} />
             <Route path="/pay/*" element={<PaySection/>}/>
+            <Route path="/sale/*" element={<OnSaleSection datos={productos}/>}/>
+            <Route path="/aboutus/*" element={<AboutUs/>}/>
           </Routes>
         </CartContext.Provider>
       </div>

@@ -1,0 +1,15 @@
+.aboutus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em;
+    border-top: var(--borderLine);
+}
+
+.aboutus div{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    flex-flow: column;
+    width: 50%;
+}

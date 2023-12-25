@@ -8,7 +8,6 @@ import { faShop } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-
   return (
     <>
       <div className="headerContainer">
@@ -26,10 +25,14 @@ const Header = () => {
           <li>
             <Link to="/">Productos</Link>
           </li>
-          <li>Sale</li>
-          <li>Quienes somos</li>
           <li>
-            <Link to="/Cart">
+            <Link to="/sale">Sale</Link>
+          </li>
+          <li>
+            <Link to="/aboutus">Quienes somos</Link>
+          </li>
+          <li>
+            <Link to="/cart">
               Carrito <FontAwesomeIcon icon={faCartShopping} />
             </Link>
           </li>
