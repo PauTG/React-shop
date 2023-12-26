@@ -1,6 +1,4 @@
 import "./Cart.css";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useEffect } from "react";
 import CartContext from "../../context/CartContext";
 import CartCard from "../CartCards/CartCards";
@@ -19,11 +17,11 @@ const Cart = () => {
         <div className="cartDiv">
           <div>
             <h3>
-              Carrito <FontAwesomeIcon icon={faCartShopping} />
+              Carrito <i className="fa-solid fa-cart-shopping"></i>
             </h3>
             <p>Monto total ${totalPrice.toFixed(2)}</p>
-            <button onClick={clearCart}>Vaciar Carrito</button>
-            <button><Link to="/pay">Finalizar compra</Link></button>
+            <button className="clearCartBtn" onClick={clearCart}>Vaciar Carrito</button>
+            <button className="buyBtn"><Link to="/pay">Finalizar compra</Link></button>
           </div>
           {cart.map((item) => (
             <CartCard key={`iqtemId-${item.id}`} data={item} />

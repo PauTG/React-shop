@@ -1,0 +1,15 @@
+.CardMessage{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    border-radius: 5px;
+    border: 1px solid gray;
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    height: 15vh;
+    padding: 3em;
+}
+

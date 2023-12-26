@@ -8,6 +8,8 @@ import axios from "axios";
 import PaySection from "./components/Cart/PaySection/PaySection";
 import OnSaleSection from "./components/OnSaleSection/OnSaleSection";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Footer from "./components/Footer/Footer";
+import CardMessage from "./components/Card/CardMessage/CardMessage";
 
 
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
   // context
   const [cart, setCart] = useState([]);
   let [totalPrice, setTotalPrice] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [showMessage, setShowMessage] = useState(false);
   // let [cantidades, setCantidades] = useState(0);
 
   ///////////////////////////////////////////////// METODOS CARRITO
@@ -59,6 +63,14 @@ const App = () => {
     setTotalPrice(0);
   };
 
+
+  const fnShowMessage = () => {
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 2000);
+  };
+
   ///////////////////////////////////////////////// METODOS CALCULO DE PRECIO
 
   const finalPrice = (cantidad, price, operacion) => {
@@ -96,6 +108,8 @@ const App = () => {
     <Router>
       <div>
         <Header />
+        {showMessage && <CardMessage/>}
+        {/* <CardMessage/> */}
         <CartContext.Provider
           value={{
             cart,
@@ -104,6 +118,7 @@ const App = () => {
             clearCart,
             finalPrice,
             totalPrice,
+            fnShowMessage
           }}
         >
           <Routes>
@@ -114,6 +129,7 @@ const App = () => {
             <Route path="/aboutus/*" element={<AboutUs/>}/>
           </Routes>
         </CartContext.Provider>
+        <Footer/>
       </div>
     </Router>
   );

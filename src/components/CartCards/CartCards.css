@@ -12,7 +12,8 @@
     transition: all .3s;
 }
 .cartCard:hover{
-    border: 1px solid rgb(1, 183, 211);
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.3);;
 }
 
 .cartCard img{

@@ -16,7 +16,8 @@
 .headerContainer div{
     display: flex;
     justify-content: space-between;
-    padding-right: 5%;
+    padding: 1em 4em 0 4em;
+
 }
 
 .headerContainer li{
@@ -55,10 +56,18 @@
     margin: .5em;
     width: auto;
     height: 100%;
-    color: rgb(0, 221, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 2em;
+    padding: .6em;
+}
+
+.headerContainer .logo img{
+    width: 2em;
 }
 .headerContainer .logo p{
     margin: 0;
+    font-weight: 900;
 }
 .logo .fa-shop{
     height: 10%;

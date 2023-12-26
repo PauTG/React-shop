@@ -4,6 +4,7 @@
     justify-content: center;
     margin: 3em;
     border-top: var(--borderLine);
+    padding-top: 2em;
 }
 
 .aboutus div{

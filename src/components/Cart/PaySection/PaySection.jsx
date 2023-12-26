@@ -37,8 +37,13 @@ const PaySection = () => {
   };
 
   const handleInputName = () => {
-    console.log(nameRef.current.value);
-    if (nameRef.current.value.length < 5) {
+    // console.log(nameRef.current.value);
+    if (
+      nameRef.current.value.length < 8 ||
+      !nameRef.current.value.includes(" ") ||
+      nameRef.current.value[nameRef.current.value.length] == " " ||
+      nameRef.current.value[0] == " "
+    ) {
       setMessages((prevMessages) => ({ ...prevMessages, messageName: true }));
     } else {
       setMessages((prevMessages) => ({ ...prevMessages, messageName: false }));
@@ -78,69 +83,71 @@ const PaySection = () => {
   };
 
   return (
-    <div className="paysection">
-      <div className="cardImg">
-        <img src={creditCard} alt="#" />
-      </div>
-      <form onSubmit={handleSubmit} action="#">
-        <label htmlFor="cardNumber">Numero de la tarjeta</label>
-        <input
-          type="number"
-          name="cardNumber"
-          id="cardNumber"
-          ref={cardNumberRef}
-          onInput={handleInputCardNumber}
-        />
-        <p>{messages.messageCardNumber && "Numero Incorrecto."}</p>
-
-        <label htmlFor="name">Nombre del titular</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          ref={nameRef}
-          onInput={handleInputName}
-        />
-        <p>{messages.messageName && "Ingrese nombre completo."}</p>
-        <div className="expirationDate">
-          <label>Fecha de expiracion</label>
-          <div>
-            <div className="dateDiv">
-              <label htmlFor="expirationMonth">Dia</label>
-              <input
-                type="number"
-                name="expirationMonth"
-                id="expirationMonth"
-                ref={dayRef}
-                onInput={handleDay}
-              />
-            </div>
-            <div className="dateDiv">
-              <label htmlFor="expirationDay">Mes</label>
-              <input
-                type="number"
-                name="expirationDay"
-                id="expirationDay"
-                ref={monthRef}
-                onInput={handleMonth}
-              />
-            </div>
-            <p></p>
-          </div>
+    <div className="paySectionContainer">
+      <div className="paysection">
+        <div className="cardImg">
+          <img src={creditCard} alt="#" />
         </div>
+        <form onSubmit={handleSubmit} action="#">
+          <label htmlFor="cardNumber">Numero de la tarjeta</label>
+          <input
+            type="number"
+            name="cardNumber"
+            id="cardNumber"
+            ref={cardNumberRef}
+            onInput={handleInputCardNumber}
+          />
+          <p>{messages.messageCardNumber && "Numero Incorrecto."}</p>
 
-        <label htmlFor="cvc">CVC</label>
-        <input
-          type="number"
-          name="cvc"
-          id="cvc"
-          ref={cvcRef}
-          onInput={handleCvc}
-        />
-        <p></p>
+          <label htmlFor="name">Nombre del titular</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            ref={nameRef}
+            onInput={handleInputName}
+          />
+          <p>{messages.messageName && "Ingrese nombre completo."}</p>
+          <div className="expirationDate">
+            <label>Fecha de expiracion</label>
+            <div>
+              <div className="dateDiv">
+                <label htmlFor="expirationMonth">Dia</label>
+                <input
+                  type="number"
+                  name="expirationMonth"
+                  id="expirationMonth"
+                  ref={dayRef}
+                  onInput={handleDay}
+                />
+              </div>
+              <div className="dateDiv">
+                <label htmlFor="expirationDay">Mes</label>
+                <input
+                  type="number"
+                  name="expirationDay"
+                  id="expirationDay"
+                  ref={monthRef}
+                  onInput={handleMonth}
+                />
+              </div>
+              <p></p>
+            </div>
+          </div>
 
-        <button type="submit">Finalizar Compra</button>
-      </form>
+          <label htmlFor="cvc">CVC</label>
+          <input
+            type="number"
+            name="cvc"
+            id="cvc"
+            ref={cvcRef}
+            onInput={handleCvc}
+          />
+          <p></p>
+
+          <button type="submit">Finalizar Compra</button>
+        </form>
+      </div>
     </div>
   );
 };
