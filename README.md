@@ -1,3 +1,11 @@
+# Levantar
+npm run dev
+
+Github: https://github.com/PauTG/React-shop
+
+Vercel: https://reactalkemy.vercel.app/
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
