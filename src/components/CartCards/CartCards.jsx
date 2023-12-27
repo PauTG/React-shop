@@ -29,7 +29,7 @@ const CartCards = ({ data }) => {
           -
         </button>
       </div>
-      <p>Precio ${data.price * data.cantidad}</p>
+      <p>Precio ${(data.price * data.cantidad).toFixed(2)}</p>
     </div>
   );
 };

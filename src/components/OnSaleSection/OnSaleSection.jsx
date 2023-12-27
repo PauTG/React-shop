@@ -6,14 +6,17 @@ import Card from "../Card/Card";
 const OnSaleSection = ({ datos }) => {
   return (
     <>
-      <div className="productSection">
-        {datos.map((producto) => {
-          if (producto.price < 15) {
-           return <Card key={`id-producto-${producto.id}`} data={producto} />;
-          }
-        })}
+      <div className="productSectionContainer">
+        <div className="productSection">
+          {datos.map((producto) => {
+            if (producto.price < 15) {
+              return (
+                <Card key={`id-producto-${producto.id}`} data={producto} />
+              );
+            }
+          })}
+        </div>
       </div>
-      <div>{/* <Cart/> */}</div>
     </>
   );
 };

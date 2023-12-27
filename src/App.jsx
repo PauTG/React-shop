@@ -68,7 +68,7 @@ const App = () => {
     setShowMessage(true);
     setTimeout(() => {
       setShowMessage(false);
-    }, 2000);
+    }, 1000);
   };
 
   ///////////////////////////////////////////////// METODOS CALCULO DE PRECIO

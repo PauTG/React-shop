@@ -5,14 +5,21 @@
   height: auto;
   border-top: var(--borderLine);
 }
-.cartDiv div{
+.cartDiv div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-weight: 500;
+}
+.cartDiv h3 {
+  font-weight: 500;
+}
+.cartDiv div:first-child{
+  background-color: rgba(128, 128, 128, 0.1);
 }
 
 .cartDiv button,
-.cartDiv button a{
+.cartDiv button a {
   font-family: inherit;
   text-decoration: none;
   color: inherit;
@@ -23,14 +30,14 @@
   color: aliceblue;
 }
 
-.cartDiv button:hover{
+.cartDiv button:hover {
   cursor: pointer;
   font-weight: 900;
 }
 
-.clearCartBtn{
+.clearCartBtn {
   background-color: brown;
 }
-.buyBtn{
+.buyBtn {
   background-color: rgb(0, 179, 207);
 }

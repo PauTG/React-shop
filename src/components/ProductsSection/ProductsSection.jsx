@@ -7,10 +7,12 @@ const ProductsSection = ({ datos }) => {
 
   return (
     <>
-      <div className="productSection">
-        {datos.map((producto) => (
-          <Card key={`id-producto-${producto.id}`} data={producto} />
-        ))}
+      <div className="productSectionContainer">
+        <div className="productSection">
+          {datos.map((producto) => (
+            <Card key={`id-producto-${producto.id}`} data={producto} />
+          ))}
+        </div>
       </div>
     </>
   );
