@@ -13,18 +13,11 @@ import CardMessage from "./components/Card/CardMessage/CardMessage";
 
 
 const App = () => {
-  // productos
   const [productos, setProductos] = useState([]);
-  // context
   const [cart, setCart] = useState([]);
   let [totalPrice, setTotalPrice] = useState(0);
-  // eslint-disable-next-line no-unused-vars
   const [showMessage, setShowMessage] = useState(false);
-  // let [cantidades, setCantidades] = useState(0);
 
-  ///////////////////////////////////////////////// METODOS CARRITO
-  // metodo para agregar item carrito
-  // recibimos un item y la cantidad "1" por defecto
   const addToCart = (item) => {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id);
 
@@ -41,8 +34,6 @@ const App = () => {
     }
   };
 
-  // metodo para eliminar item carrito
-  // pisamos el cart con el nuevo array filtrado
   const removeItemFromCart = (item) => {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id);
 
@@ -57,7 +48,6 @@ const App = () => {
     }
   };
 
-  // metodo para vaciar carrito
   const clearCart = () => {
     setCart([])
     setTotalPrice(0);
@@ -71,8 +61,6 @@ const App = () => {
     }, 1000);
   };
 
-  ///////////////////////////////////////////////// METODOS CALCULO DE PRECIO
-
   const finalPrice = (cantidad, price, operacion) => {
     setTotalPrice((prevTotalPrice) => {
       if (operacion === "+") {
@@ -80,7 +68,6 @@ const App = () => {
       } else if (operacion === "-" && cantidad > 1) {
         return prevTotalPrice - price;
       }
-      // Si no se cumple ninguna condición, devuelve el estado actual sin cambios.
       return prevTotalPrice;
     });
   };
