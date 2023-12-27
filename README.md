@@ -1,5 +1,5 @@
-# Levantar
-npm run dev
+
+Comando para visualizar: npm run dev
 
 Github: https://github.com/PauTG/React-shop
 
