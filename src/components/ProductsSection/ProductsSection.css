@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(207, 211, 158);
 }
 
 .productSection {
@@ -10,8 +11,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-top: var(--borderLine);
     margin-top: 3em;
     max-width: 90%;
+   background-color: rgb(207, 211, 158);
 }
 

@@ -4,18 +4,12 @@ const AboutUs = () => {
   return (
     <div className="aboutus">
       <div>
-        <h2>Sobre Nosotros</h2>
-        <h3>¡Bienvenido/a a Shop Cart!</h3>
+        <h2>About us</h2>
         <p>
-          Shop Cart va más allá de ser simplemente una plataforma de compras; es
-          el proyecto final de React desarrollado como parte del curso ofrecido
-          por Alkemy. Cada producto en nuestra tienda proviene de fakestoreapi,
-          lo que significa que son productos ficticios creados con fines
-          prácticos.
-        </p>
-        <p>
-          Al explorar Shop Cart, te invitamos a formar parte de este logro
-          académico y a descubrir el resultado del aprendizaje.
+          Somos Shop Store es una tienda donde encontras tus productos preferidos a la distancia de un boton
+          <p>Te contamos un poquito sobre nosotros</p>
+          <p> Ahora sentite libre de comprar!</p>
+          <p><b>Bienvenido!</b></p>
         </p>
       </div>
     </div>

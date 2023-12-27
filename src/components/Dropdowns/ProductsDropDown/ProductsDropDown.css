@@ -2,7 +2,6 @@
     background-color: rgb(66, 66, 66);
     min-width: 10em;
     max-width: 15%;
-    border: var(--borderLine);
     position: fixed;
     top: 17%;
     left: 12%;

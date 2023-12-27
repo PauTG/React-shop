@@ -4,15 +4,15 @@
     align-items: center;
     margin: 2em;
     padding: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 5px;
+    border: 1.5px solid rgb(190, 225, 168);
+    border-radius: 30px;
     /* cursor: pointer; */
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255);
     transition: all .3s;
 }
 .card:hover{
-    border: 1px solid rgba(128, 128, 128, 0.3);
-    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.3);;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.663);;
 }
 
 .card img{
@@ -32,7 +32,6 @@
 
 .priceAndButtonDiv{
     margin-top: auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .btn{
@@ -40,12 +39,11 @@
     padding: 5px;
     border: none;
     cursor: pointer;
-    background-color: rgb(0, 179, 207);
+    background-color: rgb(95, 95, 95);
     transition: all .3s;
     font-family: inherit;
     color: aliceblue;
 }
 .btn:hover{
     cursor: pointer;
-    font-weight: 900;
 }
