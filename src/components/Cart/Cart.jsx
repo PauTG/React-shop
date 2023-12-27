@@ -27,9 +27,6 @@ const Cart = () => {
             <CartCard key={`iqtemId-${item.id}`} data={item} />
           ))}
         </div>
-        {/* <Routes>
-          <Route path="/pay/*" element={<PaySection/>}/>
-        </Routes> */}
       </>
   );
 };

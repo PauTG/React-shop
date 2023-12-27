@@ -1,4 +1,6 @@
-import "./PaySection.css";
+import { useNavigate } from "react-router-dom";
+import PaymentMessage from "../PaymentMessage/PaymentMessage";
+import "./PaymentSection.css";
 import creditCard from "./img/creditCard.png";
 import { useRef, useState } from "react";
 
@@ -13,6 +15,9 @@ const PaySection = () => {
   const [dayValue, setDayValue] = useState("");
   const [monthValue, setMonthValue] = useState("");
   const [cvcValue, setCvcValue] = useState("");
+  const [showPaymentMessage, setShowPaymentMessage] = useState(false);
+  // const [redirect, setRedirect] = useState(false)
+  const navigate = useNavigate();
 
   // referencias a los inputs
   const cardNumberRef = useRef("");
@@ -82,6 +87,21 @@ const PaySection = () => {
     e.preventDefault();
   };
 
+  const handlePayment = () => {
+    if (
+      !messages.messageCardNumber &&
+      !messages.messageName &&
+      !messages.messageExpirationDate &&
+      !messages.messageCvc
+    ) {
+      setShowPaymentMessage(true);
+      setTimeout(() => {
+        setShowPaymentMessage(false);
+        navigate("/");
+      }, 2500);
+    }
+  };
+
   return (
     <div className="paySectionContainer">
       <div className="paysection">
@@ -145,9 +165,12 @@ const PaySection = () => {
           />
           <p></p>
 
-          <button type="submit">Finalizar Compra</button>
+          <button type="submit" onClick={handlePayment}>
+            Finalizar Compra
+          </button>
         </form>
       </div>
+      {showPaymentMessage && <PaymentMessage />}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import CartContext from "./context/CartContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
 import axios from "axios";
-import PaySection from "./components/Cart/PaySection/PaySection";
+import PaySection from "./components/Cart/PaymentSection/PaymentSection";
 import OnSaleSection from "./components/OnSaleSection/OnSaleSection";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Footer from "./components/Footer/Footer";

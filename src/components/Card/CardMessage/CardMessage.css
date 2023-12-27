@@ -6,9 +6,13 @@
     background-color:white;
     border-radius: 5px;
     border: 1px solid gray;
+    /* Centramos mensaje al centro */
     position: fixed;
-    top: 30%;
-    left: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* top: 30%;
+    left: 40%; */
     height: 15vh;
     padding: 3em;
 }

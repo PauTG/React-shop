@@ -1,0 +1,19 @@
+.paymentMessage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    /* Centramos mensaje al centro */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 3em;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.paymentMessage i{
+    color: green;
+    padding-right: 1em;
+    text-shadow: 1px 1px 1px gray;
+}
